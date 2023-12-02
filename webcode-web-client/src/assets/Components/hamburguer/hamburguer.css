@@ -1,0 +1,96 @@
+.hamburguer {
+  display: flex;
+  gap: 0.4rem;
+  flex-direction: column;
+  margin-left: 4rem;
+  
+  z-index:10;
+}
+
+.hamburguer:hover {
+  cursor: pointer;
+}
+
+.line {
+  width: 3.2rem;
+  height: 0.5rem;
+  background-color: #0079FF;
+  border-radius: 1rem;
+}
+
+.toggle-menu {
+  display: hidden;
+  transform: translateX(-100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  top: 0rem;
+  z-index: 10;
+  height: 60%;
+  width: 20rem;
+  background: rgb(30,10,229);
+  background: linear-gradient(180deg, rgba(30,10,229,1) 0%, rgba(12,61,225,1) 15%, rgba(15,113,219,1) 44%, rgba(24,168,200,1) 83%); 
+  border-radius: 0rem 1rem 1rem 0rem;
+  padding-left: 2rem;
+  padding-top: 3rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  color:white;
+}
+
+.toggle-menu.open {
+  display: flex;
+  transform: translateX(0);
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.menu-options {
+  padding-top:1rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  justify-content: center;
+  gap: 3rem;
+  height: 70%;
+}
+
+
+
+.menu-options li:hover {
+  color: #40128B;
+  transition: 0.2s ease-in-out all;
+}
+
+.logout{
+  font-size:1.2rem;
+  cursor:pointer;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:1rem;
+  
+}
+
+
+.logout:hover{
+  color: #40128B;
+  transition: 0.3s ease-in-out all;
+}
+
+.toggle-div{
+  
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  gap:5rem;
+  
+}

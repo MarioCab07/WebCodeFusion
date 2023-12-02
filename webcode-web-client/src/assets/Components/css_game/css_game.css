@@ -1,0 +1,265 @@
+.game-page {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 27%,
+    rgba(9, 9, 121, 1) 66%,
+    rgba(95, 5, 174, 1) 81%,
+    rgba(114, 13, 152, 1) 96%,
+    rgba(126, 19, 138, 1) 100%
+  );
+  color: #000000;
+  min-height: 100vh;
+}
+
+.playground {
+  width: 100%;
+  /* height: 100vh; */
+  padding: 20px;
+  display: flex;
+}
+
+.left,
+.right {
+  flex-basis: 50%;
+  padding: 10px;
+}
+
+.right {
+  text-align: center;
+}
+
+.right button {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  background: green;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  width: 80px;
+  height: 40px;
+  transition: all 900ms;
+}
+
+.right button:hover {
+  background: rgb(5, 210, 5);
+}
+
+.left textarea {
+  width: 100%;
+  height: 45%;
+  background: #1f1f1f;
+  color: wheat;
+  padding: 10px 20px;
+  border: 0;
+  outline: 0;
+  font-size: 1.2rem;
+  resize: none;
+  overflow: visible;
+}
+
+.right iframe {
+  width: 100%;
+  height: 80vh;
+  background: #fff;
+  border: 0;
+  outline: 0;
+  scroll-behavior: smooth;
+  overflow: visible;
+}
+
+.left label {
+  display: flex;
+  justify-content: center;
+  background: #000;
+  height: 30px;
+  font-size: 1.2rem;
+}
+
+.extra-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.prelevel,
+.nextlevel {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.level {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #3498db;
+  border-radius: 5px;
+  margin: 0 10px;
+  background-color: #fff;
+  color: #333;
+}
+
+.task-area {
+  margin: 20px;
+}
+
+.Task {
+  width: 100%;
+  padding: 40px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.right .finalizar {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  background: red;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  width: 90px;
+  height: 40px;
+  transition: all 900ms;
+}
+
+.right .finalizar:hover {
+  background: rgb(217, 41, 41);
+}
+
+.puntos-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.forbidden {
+  background: rgb(219, 15, 141);
+  background: linear-gradient(
+    180deg,
+    rgba(219, 15, 141, 1) 44%,
+    rgba(200, 24, 183, 1) 91%
+  );
+  padding: 1rem;
+  border-radius: 1rem;
+
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.forbidden h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.forbidden-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 80%;
+  padding: 2rem;
+}
+
+.ranking-section {
+  display: flex;
+  justify-content: center;
+  /* background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 27%,
+    rgba(9, 9, 121, 1) 66%,
+    rgba(95, 5, 174, 1) 81%,
+    rgba(114, 13, 152, 1) 96%,
+    rgba(126, 19, 138, 1) 100%
+  ); */
+
+  gap: 3rem;
+}
+
+.ranking {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: red;
+
+  background: rgb(135, 28, 112);
+  background: rgb(135, 28, 112);
+  background: rgb(135, 28, 112);
+  background: linear-gradient(
+    180deg,
+    rgba(135, 28, 112, 1) 17%,
+    rgba(184, 16, 148, 1) 49%,
+    rgba(210, 12, 113, 1) 66%,
+    rgba(218, 11, 103, 1) 87%,
+    rgba(229, 10, 89, 1) 96%,
+    rgba(200, 24, 76, 1) 100%
+  );
+  color: white;
+  gap: 3rem;
+}
+
+.rank-info {
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+}
+
+.rank-info ol {
+}
+
+.ranking-title {
+  color: white;
+  display: flex;
+  font-size: 3rem;
+  justify-content: space-between;
+}
+
+.rank-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+.game-div,
+.game-content {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 27%,
+    rgba(9, 9, 121, 1) 66%,
+    rgba(95, 5, 174, 1) 81%,
+    rgba(114, 13, 152, 1) 96%,
+    rgba(126, 19, 138, 1) 100%
+  );
+  min-height: 2000px;
+}
+
+.progressbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

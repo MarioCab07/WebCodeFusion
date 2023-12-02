@@ -1,0 +1,101 @@
+.log-sec {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../../img/login-BG.jpg");
+  /* padding: 3rem; */
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  gap: 10rem;
+  position: relative;
+}
+
+.logIn {
+  position: relative;
+  /* background: linear-gradient(
+    180deg,
+    #297ad2 8.33%,
+    rgba(175, 57, 149, 0.94) 31.77%,
+    rgba(174, 58, 150, 0.93) 45.83%,
+    rgba(162, 67, 157, 0.82) 70.31%,
+    rgba(65, 135, 212, 0) 100%
+  ); */
+
+  background-color: #000000;
+  border: 2px solid #00ffe0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  border-radius: 2rem;
+  width: 21.75rem;
+  height: 21.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.logIn h4 {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.log-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.log-form input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  padding: 0.5rem;
+}
+
+.log-form input::placeholder {
+  font-size: 1rem;
+  color: white;
+}
+
+#submit-btn {
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  position: absolute;
+  top: 300px;
+  left: 80px;
+  width: 200px;
+  background-color: #00ffe0;
+  color: #526d82;
+  font-size: 1.2rem;
+}
+
+#submit-btn:visited {
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  position: absolute;
+  top: 300px;
+  left: 80px;
+  width: 200px;
+  background-color: #00ffe0;
+  color: #526d82;
+  font-size: 1.2rem;
+}
+
+.log-form input:focus {
+  outline: none;
+  background-color: #eeee;
+  border-radius: 0.5rem;
+  color: black;
+}
+.log-form input:focus::placeholder {
+  color: black;
+}
+
+#submit-btn:hover {
+  cursor: pointer;
+  background-color: white;
+  transition: all ease-in-out 0.2s;
+}

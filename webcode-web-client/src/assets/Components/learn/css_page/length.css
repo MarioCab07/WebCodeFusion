@@ -1,0 +1,40 @@
+.length-father {
+  height: 100%;
+  display: flex;
+  gap: 2rem;
+  padding: 6rem;
+}
+
+.length-father .length-container {
+  flex: 1 1 100px;
+}
+
+.rel {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 3rem;
+  height: 40rem;
+  align-items: center;
+}
+
+.abs {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 3rem;
+  height: 40rem;
+  align-items: center;
+}
+
+.vertical-line {
+  height: 40rem;
+  width: 1px;
+  background-color: white;
+}
+
+.length-container h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem;
+}

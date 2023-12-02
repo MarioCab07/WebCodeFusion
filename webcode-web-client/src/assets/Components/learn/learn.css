@@ -1,0 +1,59 @@
+.learn-main {
+  color: white;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 27%,
+    rgba(9, 9, 121, 1) 66%,
+    rgba(95, 5, 174, 1) 81%,
+    rgba(114, 13, 152, 1) 96%,
+    rgba(126, 19, 138, 1) 100%
+  );
+}
+
+.learn-main .section-div {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+
+.learn-main .html {
+  background-color: #ff6c22;
+  padding: 1rem;
+  border-radius: 2rem;
+
+  width: 20%;
+}
+
+.learn-main .html:hover {
+  color: #ff6c22;
+  background-color: #eeee;
+  transition: 0.3s ease-in-out all;
+}
+
+.learn-main .css {
+  background-color: #39a7ff;
+  padding: 1rem;
+  border-radius: 2rem;
+
+  width: 20%;
+}
+
+.learn-main .css:hover {
+  color: #39a7ff;
+  background-color: #eeee;
+  transition: 0.3s ease-in-out all;
+}
+
+.learn-main .html.active {
+  color: #ff6c22;
+  background-color: #eeee;
+  transition: 0.3s ease-in-out all;
+}
+
+.learn-main .css.active {
+  color: #39a7ff;
+  background-color: #eeee;
+  transition: 0.3s ease-in-out all;
+}

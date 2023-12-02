@@ -1,0 +1,78 @@
+/* .main{
+    overflow: hidden; 
+    width: 100%; 
+    height: 100vh; 
+    background-color: #0d1a3d; 
+} */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.game-content{
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 27%,
+    rgba(9, 9, 121, 1) 66%,
+    rgba(95, 5, 174, 1) 81%,
+    rgba(114, 13, 152, 1) 96%,
+    rgba(126, 19, 138, 1) 100%
+  );
+
+  height: 1500px;
+  color: #000000;
+}
+
+.container {
+  width: 100%;
+
+  padding: 20px;
+  display: flex;
+}
+
+.left,
+.right {
+  flex-basis: 50%;
+  padding: 10px;
+}
+
+#problem,
+.textarea {
+  width: 100%;
+  height: 60%;
+  background: #ecf0f1;
+  color: #000000;
+  padding: 10px 20px;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+.iframe {
+  width: 100%;
+  height: 140%;
+  background: #cecece;
+  border: 0;
+  outline: 0;
+}
+
+label i {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+label {
+  color: white;
+  display: flex;
+  align-items: center;
+  background: #000000;
+  height: 30px;
+}
+.game-content.disabled {
+  background-color: rgba(128, 128, 128, 0.2); /* Gris con opacidad */
+  pointer-events: none; /* Evita interacciones con el contenido bloqueado */
+}

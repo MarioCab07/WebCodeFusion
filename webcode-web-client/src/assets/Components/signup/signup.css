@@ -1,0 +1,163 @@
+.sign-sec {
+  background-color: #040a1a;
+  background-image: url("../../img/sign-BG.jpg");
+  
+  height: 100vh;
+}
+.sign-title {
+  font-weight: bolder;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  user-select: none;
+  flex: 1;
+}
+
+.sign-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+  color: white;
+  width: 70%;
+}
+
+.input-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sign-art {
+  height: 80%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding-left:3rem;
+}
+
+.sign-art input {
+  background: none;
+  border: none;
+  background-color: #1c243a;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  width: 400px;
+}
+
+.inputs {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.sign-inputs{
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+#sub-btn {
+  width: 30%;
+  background: none;
+  border: none;
+  background-color: #e50a59;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+#sub-btn:hover {
+  background-color: white;
+  color: #e50a59;
+  transition: all ease-in-out 0.3s;
+}
+
+.title-info {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 1rem;
+}
+
+.title {
+  color: white;
+  font-size: 3rem;
+}
+
+.log-link {
+  text-decoration: none;
+  color: #e50a59;
+}
+
+.log-link:hover {
+  color: white;
+}
+
+.title-info span {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.input-info label {
+  font-size: 1.5rem;
+  background:none;  
+}
+
+.sign-art input:focus {
+  outline: none;
+  background-color: white;
+  color: black;
+}
+
+.sign-header {
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+.sign-art h5 {
+  color: white;
+  opacity: 0.6;
+}
+
+.errors-art {
+  color: white;
+  background-color: black;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  border: 1px solid #e50a59;
+}
+
+.formcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  /* background-color: red; */
+}
+
+.errors-art ul {
+  list-style: disc;
+}
+.conflict{
+  
+  width:30%;
+  font-size:1.5rem;
+  color:#e50a59;
+
+}

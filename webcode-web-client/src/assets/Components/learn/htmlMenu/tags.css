@@ -1,0 +1,94 @@
+.tag-container {
+  background: rgb(135, 28, 112);
+  background: linear-gradient(
+    180deg,
+    rgba(135, 28, 112, 1) 1%,
+    rgba(154, 80, 155, 1) 58%,
+    rgba(163, 102, 151, 1) 87%
+  );
+  border: 1px solid white;
+  width: 25%;
+  height: 15rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: rgb(135, 28, 112);
+  background: rgb(135, 28, 112);
+  background: rgb(135, 28, 112);
+  background: linear-gradient(
+    180deg,
+    rgba(135, 28, 112, 1) 17%,
+    rgba(184, 16, 148, 1) 49%,
+    rgba(210, 12, 113, 1) 66%,
+    rgba(218, 11, 103, 1) 87%,
+    rgba(229, 10, 89, 1) 96%,
+    rgba(200, 24, 76, 1) 100%
+  );
+  color: white;
+  gap: 1rem;
+  transition: height 0.3s ease;
+  overflow: hidden;
+}
+
+.tag-section {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  padding: 4rem;
+}
+
+.tag-container.expanded {
+  height: 20rem;
+  align-items: flex-start;
+}
+
+.tagname {
+  width: 100%;
+  text-align: center;
+}
+
+.tag-father {
+  display: flex;
+
+  padding: 2rem;
+}
+
+.tag-container.entering,
+.tag-container.exiting,
+.tag-container.exited {
+  transition: height 0.3s ease;
+  overflow: hidden;
+}
+
+.tag-container.entered {
+  overflow: hidden;
+}
+
+.tag-transition-enter {
+  height: 0;
+  opacity: 0;
+}
+
+.tag-transition-enter-active {
+  height: 15rem;
+  opacity: 1;
+  transition: height 0.3s ease, opacity 0.3s ease;
+}
+
+.tag-transition-exit {
+  height: 15rem;
+  opacity: 1;
+}
+
+.tag-transition-exit-active {
+  height: 0;
+  opacity: 0;
+  transition: height 0.3s ease, opacity 0.3s ease;
+}

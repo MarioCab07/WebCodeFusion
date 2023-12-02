@@ -1,0 +1,87 @@
+.main-content {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../../img/Main-BG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5rem;
+}
+
+.info-container {
+  margin-left: 4rem;
+  padding: 2rem;
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.title-container {
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content:center;
+
+  gap: 3rem;
+}
+
+.title-container h1 {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.title-container h3 {
+  opacity: 0.7;
+  font-size: 2rem;
+}
+
+.learn-btn {
+  font-size: 1.3rem;
+  background: none;
+  border: none;
+  background-color: #e50a59;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  width: 200px;
+  color: white;
+  font-weight: bolder;
+}
+.learn-btn:hover {
+  background-color: white;
+  color: #e50a59;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3rem;
+}
+
+.main-btn {
+  background-color: #e50a59;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+  width: 150px;
+  font-weight: bolder;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+.main-btn:hover {
+  background-color: white;
+  color: #e50a59;
+  transition: all 0.3s ease-in-out;
+}
+
+.learnbtn{
+  width:600px;
+  flex:1;
+}

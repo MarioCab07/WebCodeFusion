@@ -1,0 +1,113 @@
+.tag-search {
+  padding: 3rem;
+  color: black;
+
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.tag-search form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tag-search input {
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.tag-search input:focus {
+  outline: none;
+  background-color: black;
+  color: white;
+}
+
+.search-result {
+  color:white;
+  border-radius: 1rem;
+  background: rgb(179,0,94);
+background: linear-gradient(180deg, rgba(179,0,94,1) 0%, rgba(106,0,179,1) 100%); 
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  max-width:60%;
+  gap: 1.5rem;
+}
+
+.btn-div {
+  gap: 0.5rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-div .delete {
+  background-color: red;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  color: white;
+}
+
+.btn-div .search {
+  background-color: #96efff;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.btn-div .search:hover {
+  color: black;
+  background-color:white;
+}
+
+.tag-search h4 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.div-example {
+  color: white;
+ display:flex;
+
+
+ gap:1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.div-example label{
+  background:none;
+}
+
+.div-example ol{
+  list-style:dot;
+}
+
+.div-example ul{
+  list-style:disc;
+}
+
+.div-example a {
+  color: #00A9FF;
+  font-size:1.5rem;
+}
+
+.div-example a:hover{
+  transition:0.3s all ease;
+  color:#F99417;
+}
+
+.div-example select {
+  padding: 1rem;
+  border-radius: 1rem;
+  color: black;
+}
+
+
+.div-example textarea{
+  color:black;
+}
