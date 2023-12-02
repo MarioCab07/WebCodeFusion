@@ -15,6 +15,9 @@ import { addLineBreaks } from '../../../../services/api.services';
 import { findMe } from '../../../../services/api.services';
 import { NavLink } from 'react-router-dom';
 import { saveGame } from '../../../../services/api.services';
+import { rankedGames } from "../../../../services/api.services";
+import { LuCrown } from "react-icons/lu";
+
 
 const HtmlInterface = () => {
   const [currentLevel, setCurrentLevel] = useState(1);
@@ -35,6 +38,8 @@ const HtmlInterface = () => {
   const [isLogged, setIsLogged] = useState(false);
   const Token = sessionStorage.getItem('token' || '');
   const [userpoints, setUserpoints] = useState(0);
+  const [games,setGames]=useState([]);
+  const [fetchedGames,setFetched]=useState(false);
 
   const Juego = {
     name:"HyperText",
@@ -208,6 +213,23 @@ const HtmlInterface = () => {
     setFeedbackColor('');
   };
 
+
+  useEffect(()=>{
+
+    const fetchGames = async()=>{
+      const response = await rankedGames("Style Paper");
+      console.log(response.data.game);
+      if(response.status===200){
+        setGames(response.data.game)
+        setFetched(true);
+      }
+    }
+  
+    if(isLogged && !fetchedGames){
+      fetchGames();
+    }
+  },[games,isLogged,fetchedGames])
+
   return (
     <div className='game-content'>
       <Header />
@@ -332,7 +354,45 @@ const HtmlInterface = () => {
               </div>
 
             </div>
+
+
           </div>
+
+
+          <section className='ranking-section'>
+       
+       <article className='ranking'>
+       <div className='ranking-title'>
+
+<h3>Ranking </h3>
+<LuCrown color='yellow'/>
+</div>
+ 
+       
+         <div className='rank-labels'>
+               <h3>User</h3>
+               <h3>Puntuacion</h3>
+               </div>
+         {games.map((t,index)=>{
+           return(
+             <>
+           
+             <div key={index} className='rank-info'>
+          
+            <h4> {index+1}.  {t.user.username}</h4>
+             <h4> {t.puntuation}</h4>
+           
+
+             
+              
+             </div>
+            
+
+             </>
+           )
+         })}
+       </article>
+       </section>
         </>
       ) : (
         <>

@@ -6,10 +6,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
-      "prebuild": "nvm install 18.17.1",
-      "build": "cyclic build",
-      "postbuild": "nvm use 18.17.1 && your-custom-postbuild-script"
-    
+    "npm-run-start":"node app.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

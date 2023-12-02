@@ -11,6 +11,9 @@ import { NavLink } from "react-router-dom";
 import './css_game.css'
 import Header from '../header/header';
 import axios from 'axios';
+import { saveGame } from '../../../services/api.services';
+import { rankedGames } from '../../../services/api.services';
+import { LuCrown } from "react-icons/lu";
 
 const CssGame = () => {
   const [htmlCode, setHtmlCode] = useState('');
@@ -25,6 +28,13 @@ const CssGame = () => {
   const [isLogged,setIsLogged]=useState(false);
   const [puntosGuardados, setPuntosGuardados] = useState(false);
   const [respuestaEnviada, setRespuestaEnviada] = useState(Array(totalLevels).fill(false));
+  const [Userpoints, setUserpoints] = useState(0);
+  const [games,setGames]=useState([]);
+  const [fetchedGames,setFetched]=useState(false);
+  const Juego = {
+    name: "StylePaper",
+    puntuation: puntos,
+  };
   const nonJump = (input) => {
     if (typeof input === "string") {
       return input.replace(/\n\s*/g, "");
@@ -37,9 +47,9 @@ const CssGame = () => {
     const totalPoints = 1000;
     const totalLevels = 20;
   
-    let points = totalPoints / totalLevels;
+    let puntos = totalPoints / totalLevels;
   
-    return points;
+    return puntos;
   };
 
   useEffect(() => {
@@ -262,29 +272,40 @@ const CssGame = () => {
   };
 
   const finalizarJuego = async () => {
-    console.log('Respuestas:', respuestas);
-    console.log('Puntuación final:', puntos);
+    console.log(puntos);
+    console.log(Juego);
+  if (!puntosGuardados && isLogged) {
+    try {
+      const puntos = calculatePoints();
+      setUserpoints(puntos);
 
-    if (!puntosGuardados && isLogged) {
-      try {
-        const response = await axios.post(
-          '',
-          { puntos },
-          { headers: { Authorization: `Bearer ${Token}` } }
-        );
-  
-        if (response.status === 200) {
-          console.log('Puntos guardados exitosamente');
-          setPuntosGuardados(true);
-        } else {
-          console.error('Error al guardar los puntos');
-        }
-      } catch (error) {
-        console.error('Error al comunicarse con el servidor', error);
+      if (!puntosGuardados) {
+        setPuntosGuardados(true);
+
+        
+        const response = await saveGame(Juego, Token);
       }
+    } catch (error) {
+      console.error('Error al comunicarse con el servidor', error);
     }
-  };
+  }
+};
 
+useEffect(()=>{
+
+  const fetchGames = async()=>{
+    const response = await rankedGames("Style Paper");
+    console.log(response.data.game);
+    if(response.status===200){
+      setGames(response.data.game)
+      setFetched(true);
+    }
+  }
+
+  if(isLogged && !fetchedGames){
+    fetchGames();
+  }
+},[games,isLogged,fetchedGames])
   
   return(    
     <body className="game-page">
@@ -330,6 +351,41 @@ const CssGame = () => {
                   <iframe id="output"></iframe>
                 </div>
               </div>
+
+              <section className='ranking-section'>
+       
+       <article className='ranking'>
+       <div className='ranking-title'>
+
+<h3>Ranking </h3>
+<LuCrown color='yellow'/>
+</div>
+ 
+       
+         <div className='rank-labels'>
+               <h3>User</h3>
+               <h3>Puntuacion</h3>
+               </div>
+         {games.map((t,index)=>{
+           return(
+             <>
+           
+             <div key={index} className='rank-info'>
+          
+            <h4> {index+1}.  {t.user.username}</h4>
+             <h4> {t.puntuation}</h4>
+           
+
+             
+              
+             </div>
+            
+
+             </>
+           )
+         })}
+       </article>
+       </section>
             </div>
           ) : (
           <>
