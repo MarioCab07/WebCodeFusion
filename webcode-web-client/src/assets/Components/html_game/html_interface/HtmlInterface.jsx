@@ -15,6 +15,9 @@ import { addLineBreaks } from '../../../../services/api.services';
 import { findMe } from '../../../../services/api.services';
 import { NavLink } from 'react-router-dom';
 import { saveGame } from '../../../../services/api.services';
+
+import { set } from 'date-fns';
+
 import { rankedGames } from "../../../../services/api.services";
 import { LuCrown } from "react-icons/lu";
 
@@ -45,8 +48,6 @@ const HtmlInterface = () => {
     name:"HyperText",
     puntuation:userpoints
   }
-
-  saveGame(Juego, Token);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -92,10 +93,10 @@ const HtmlInterface = () => {
   const calculatePoints = () => {
     const totalPoints = 1000;
     const totalLevels = 35;
-  
-    let points = Math.floor((totalPoints / totalLevels) * (currentLevel - 1));
 
-  return points >= 0 ? points : 0;
+    let points = Math.floor((totalPoints / totalLevels));
+
+    return points >= 0 ? points : 0;
   };
 
   const handlePrevLevel = () => {
@@ -134,8 +135,6 @@ const HtmlInterface = () => {
       const userAnswerValue = nonJump(document.getElementById('html-code').value);
       const userAnswerArray = userAnswerValue.split(';').map(line => line.trim()).filter(line => line !== '');
 
-      let points = 0;
-
       if (
         userAnswerArray.length > 0 &&
         (
@@ -154,8 +153,8 @@ const HtmlInterface = () => {
         setFeedbackColor('bg-green-500');
 
         // Calcular y actualizar puntos según la dificultad
-        points = calculatePoints();
-        setScore(score + points);
+        const points = calculatePoints();
+        setScore(score + points)
 
         // Mover al siguiente nivel después de 1 segundo
         setTimeout(() => {
@@ -240,7 +239,7 @@ const HtmlInterface = () => {
             <h1 className='m-0 text-white'>HyperTextRace</h1>
 
             <div >
-            <div className='text-white text-2xl '> Puntos: {calculatePoints()}</div>
+            <div className='text-white text-2xl '> Puntos: {score}</div>
             </div>
 
             <section className='flex'>

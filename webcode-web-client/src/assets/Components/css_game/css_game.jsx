@@ -43,6 +43,7 @@ const CssGame = () => {
       return input;
     }
   };
+  
   const calculatePoints = () => {
     const totalPoints = 1000;
     const totalLevels = 20;
