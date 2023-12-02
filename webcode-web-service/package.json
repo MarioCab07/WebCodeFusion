@@ -8,7 +8,7 @@
     "dev": "nodemon ./bin/www"
   },
   "engines": {
-    "node":"18.17.1"
+    "node":"18.12.1"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
