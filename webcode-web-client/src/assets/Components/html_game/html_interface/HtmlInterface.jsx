@@ -43,6 +43,7 @@ const HtmlInterface = () => {
   const [userpoints, setUserpoints] = useState(0);
   const [games,setGames]=useState([]);
   const [fetchedGames,setFetched]=useState(false);
+  const [isAdmin,setIsAdmin]=useState(false)
 
   const Juego = {
     name:"HyperText",
@@ -191,9 +192,17 @@ const HtmlInterface = () => {
   const finalizarJuego = async () => {
     if (!puntosGuardados && isLogged) {
       try {
-        const points = calculatePoints();  // Calcular puntos aquí
-        setUserpoints(points);  // Almacenar puntos en userpoints
-        const response = await saveGame(Juego, Token)
+        const points = score;  // Calcular puntos aquí
+        
+        Juego.puntuation=points;
+        
+        const response = await saveGame(Juego, Token);
+
+        if(response===200){
+          window.location.reload();
+
+        }
+        
       } catch (error) {
         console.error('Error al comunicarse con el servidor', error);
       }
@@ -216,7 +225,7 @@ const HtmlInterface = () => {
   useEffect(()=>{
 
     const fetchGames = async()=>{
-      const response = await rankedGames("Style Paper");
+      const response = await rankedGames("HyperText");
       console.log(response.data.game);
       if(response.status===200){
         setGames(response.data.game)
