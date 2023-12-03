@@ -295,7 +295,7 @@ const CssGame = () => {
 useEffect(()=>{
 
   const fetchGames = async()=>{
-    const response = await rankedGames("Style Paper");
+    const response = await rankedGames("StylePaper");
     console.log(response.data.game);
     if(response.status===200){
       setGames(response.data.game)
